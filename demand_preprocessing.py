@@ -34,7 +34,7 @@ for i in range (2013, 2021): #repeats for data from 2013-2020
                 ott = (row[5])
                 bruce = (row[9])
                 diff = (row[14])
-                holiday =0
+                #holiday =0
 
                 if i <2018: #striping dates
                     d = datetime.strptime(date,'%Y-%m-%d')
@@ -46,6 +46,6 @@ for i in range (2013, 2021): #repeats for data from 2013-2020
                     d = datetime.strptime(date,'%d/%m/%Y')
                     dt = datetime.date(d)
 
-                demand_writer.writerow((dt.year, dt.month, dt.day,hour,toronto,ott,bruce,diff,holiday)) #outputs to processed data
+                demand_writer.writerow((dt.year, dt.month, dt.day,hour,toronto,ott,bruce,diff)) #outputs to processed data
 
 
