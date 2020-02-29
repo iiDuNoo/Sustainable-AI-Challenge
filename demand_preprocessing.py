@@ -9,7 +9,7 @@ from prices import getprice
 from pathlib import Path
 
 def run():
-    for i in range (2013, 2021): #repeats for data from 2013-2020
+    for i in range (2017, 2021): #repeats for data from 2013-2020
         #load yearly data
 
         demanddata = open('C:\\Users\\Adam\\Documents\\GitHub\\Sustainable-AI-Challenge\\Raw_Dataset\\PUB_DemandZonal_'+ str(i) +'.csv','rt')
@@ -26,7 +26,7 @@ def run():
 
         with open('C:\\Users\\Adam\\Documents\\GitHub\\Sustainable-AI-Challenge\\Postprocessed_Dataset\\demand_' + str(i) +'.csv', mode='w',newline='') as demand_file:
             demand_writer = csv.writer(demand_file, delimiter=',',quoting=csv.QUOTE_ALL)
-            demand_writer.writerow(("Year","Month","Day","Hour","Toronto","Ottawa","Bruce","Difference","Holiday & Weekends","HOEP Price",'\n')) #writes header
+            demand_writer.writerow(("Year","Month","Day","Hour","Toronto","Ottawa","Bruce","Difference","Holiday & Weekends","Price_Tor","Price_Ott", "Price_Bruce",'\n')) #writes header
             next(csvdemand)#spacing
             next(csvdemand)
             next(csvdemand)
@@ -42,6 +42,9 @@ def run():
                 diff = (row[14])
                 holiday= main(date,i)
                 price = getprice(count,i)
+                torprice = price[0]
+                ottprice = price[1]
+                bruceprice = price[2]
                 #holiday = subprocess.check_output([sys.executable, "holidays.py", date,str(i)])
 
                 if i <2018: #striping dates
@@ -54,7 +57,7 @@ def run():
                     d = datetime.strptime(date,'%d/%m/%Y')
                     dt = datetime.date(d)
 
-                demand_writer.writerow((dt.year, dt.month, dt.day,hour,toronto,ott,bruce,diff,holiday,price)) #outputs to processed data
+                demand_writer.writerow((dt.year, dt.month, dt.day,hour,toronto,ott,bruce,diff,holiday,torprice,ottprice,bruceprice)) #outputs to processed data
 
 run()
 

@@ -10,8 +10,7 @@ for i in range (2013, 2021): #repeats for data from 2013-2020
         demand_writer = csv.writer(demand_file, delimiter=',', quoting=csv.QUOTE_ALL)
 
         if count ==0:
-            demand_writer.writerow(("Year", "Month", "Day", "Hour", "Toronto", "Ottawa", "Bruce", "Difference",
-                                "Holiday & Weekends", "HOEP Price", '\n'))  # writes header
+            demand_writer.writerow(("Year","Month","Day","Hour","Toronto","Ottawa","Bruce","Difference","Holiday & Weekends","Price_Tor","Price_Ott", "Price_Bruce",'\n')) #writes header
             count+=1
 
         next(csvdata)
@@ -25,6 +24,8 @@ for i in range (2013, 2021): #repeats for data from 2013-2020
             bruce = (row[6])
             diff = (row[7])
             holiday = (row[8])
-            price = (row[9])
-            demand_writer.writerow((year, month, day, hour, toronto, ott, bruce, diff, holiday, price))  # outputs to processed data
+            torprice = (row[9])
+            ottprice = (row[10])
+            bruceprice = (row[11])
+            demand_writer.writerow((year, month, day,hour,toronto,ott,bruce,diff,holiday,torprice,ottprice,bruceprice))  # outputs to processed data
 
