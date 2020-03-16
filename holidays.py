@@ -16,7 +16,7 @@ def main(date,i):
         new =[x[0], x[1], x[2]]
         arr.append(new)
 
-    #for i in range(2013, 2021): #repeats for data from 2013-2020
+    #for i in range(2013, 2021): #repeats for data from 2003-2020
 
     #demanddata = open('C:\\Users\\Adam\\Documents\\GitHub\\Sustainable-AI-Challenge\\Postprocessed_Dataset\\dataset_toronto.csv','r')
     #csvdemand = csv.reader(demanddata,delimiter=',') #converts to csv

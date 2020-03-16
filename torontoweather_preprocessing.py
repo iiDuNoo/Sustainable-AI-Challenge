@@ -2,7 +2,7 @@
 import csv
 from datetime import datetime
 from pathlib import Path
-for i in range (2013, 2021): #repeats for data from 2013-2020
+for i in range (2003, 2013): #repeats for data from 2003-2020
     #load yearly data
 
     #demanddata = open('C:\\Users\\Adam\\Documents\\GitHub\\Sustainable-AI-Challenge\\Raw_Dataset\\PUB_DemandZonal_'+ str(i) +'.csv','rt')
@@ -32,5 +32,3 @@ for i in range (2013, 2021): #repeats for data from 2013-2020
                 wspeed = (row[17])
 
                 toronto_writer.writerow((year, month, day,hour,temp,dew,relhum,wspeed)) #outputs to processed data
-
-

@@ -9,7 +9,7 @@ from prices import getprice
 from pathlib import Path
 
 def run():
-    for i in range (2017, 2021): #repeats for data from 2013-2020
+    for i in range (2003, 2004): #repeats for data from 2003-2020
         #load yearly data
 
         demanddata = open('C:\\Users\\Adam\\Documents\\GitHub\\Sustainable-AI-Challenge\\Raw_Dataset\\PUB_DemandZonal_'+ str(i) +'.csv','rt')
@@ -60,4 +60,3 @@ def run():
                 demand_writer.writerow((dt.year, dt.month, dt.day,hour,toronto,ott,bruce,diff,holiday,torprice,ottprice,bruceprice)) #outputs to processed data
 
 run()
-
