@@ -2,11 +2,11 @@
 import csv
 from datetime import datetime
 count=0
-for i in range(2003, 2020): #repeats for data from 2003-2020
+for i in range(2020, 2021): #repeats for data from 2003-2020
     data = open(
         'C:\\Users\\Adam\\Documents\\GitHub\\Sustainable-AI-Challenge\\Postprocessed_Dataset\\demand_' + str(i) + '.csv','rt')
     csvdata = csv.reader(data, delimiter=',')  # converts to csv
-    with open('C:\\Users\\Adam\\Documents\\GitHub\\Sustainable-AI-Challenge\\Postprocessed_Dataset\\combined_demand.csv', mode='a', newline='') as demand_file:
+    with open('C:\\Users\\Adam\\Documents\\GitHub\\Sustainable-AI-Challenge\\Postprocessed_Dataset\\combined_demand_2020.csv', mode='a', newline='') as demand_file:
         demand_writer = csv.writer(demand_file, delimiter=',', quoting=csv.QUOTE_ALL)
 
         if count ==0:

@@ -29,7 +29,7 @@ def main(date,i):
         d = datetime.strptime(date, '%Y-%m-%d')
         dt = datetime.date(d)
     elif i == 2020:
-        d = datetime.strptime(date, '%Y-%m-%d')
+        d = datetime.strptime(date, '%d/%m/%Y')
         dt = datetime.date(d)
     else:
         d = datetime.strptime(date, '%d/%m/%Y')

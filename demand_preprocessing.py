@@ -9,7 +9,7 @@ from prices import getprice
 from pathlib import Path
 
 def run():
-    for i in range (2003, 2004): #repeats for data from 2003-2020
+    for i in range (2020, 2021): #repeats for data from 2003-2020
         #load yearly data
 
         demanddata = open('C:\\Users\\Adam\\Documents\\GitHub\\Sustainable-AI-Challenge\\Raw_Dataset\\PUB_DemandZonal_'+ str(i) +'.csv','rt')
@@ -51,7 +51,7 @@ def run():
                     d = datetime.strptime(date,'%Y-%m-%d')
                     dt = datetime.date(d)
                 elif i ==2020:
-                    d = datetime.strptime(date,'%Y-%m-%d')
+                    d = datetime.strptime(date,'%d/%m/%Y')
                     dt = datetime.date(d)
                 else:
                     d = datetime.strptime(date,'%d/%m/%Y')
