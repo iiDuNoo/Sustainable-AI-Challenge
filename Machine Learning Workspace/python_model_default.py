@@ -17,7 +17,7 @@ class AzureMLModel:
         self.model = Sequential()
         self.model.add(LSTM(50, activation='relu',input_shape=(n_steps,n_features)))
         self.model.add(Dense(1))
-        self.model.compile(optimizer='adam',loss'mse')
+        self.model.compile(optimizer='adam',loss='mse')
         self.feature_column_names = list()
 
     # Train model
