@@ -63,9 +63,9 @@ $(function () {
   }
 
   // This will get the first returned node in the jQuery collection.
-  var salesChart = new Chart(salesChartCanvas, { 
-      type: 'line', 
-      data: salesChartData, 
+  var salesChart = new Chart(salesChartCanvas, {
+      type: 'line',
+      data: salesChartData,
       options: salesChartOptions
     }
   )
@@ -81,12 +81,12 @@ $(function () {
     var pieChartCanvas = $('#pieChart').get(0).getContext('2d')
     var pieData        = {
       labels: [
-          'Chrome', 
+          'Chrome',
           'IE',
-          'FireFox', 
-          'Safari', 
-          'Opera', 
-          'Navigator', 
+          'FireFox',
+          'Safari',
+          'Opera',
+          'Navigator',
       ],
       datasets: [
         {
@@ -105,7 +105,7 @@ $(function () {
     var pieChart = new Chart(pieChartCanvas, {
       type: 'doughnut',
       data: pieData,
-      options: pieOptions      
+      options: pieOptions
     })
 
   //-----------------
@@ -118,7 +118,7 @@ $(function () {
    */
   $('#world-map-markers').mapael({
       map: {
-        name : "usa_states",
+        name : "canada",
         zoom: {
           enabled: true,
           maxLevel: 10
